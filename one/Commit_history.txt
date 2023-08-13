@@ -5,3 +5,5 @@
 3. Data fetch using React Query in RQSuperHeroes.page.jsx
 
 4. Show Error message while fetch data in SuperHeroes.page.jsx 
+
+5. Show Error message while fetch data using React Query in RQSuperHeroes.page.jsx 
