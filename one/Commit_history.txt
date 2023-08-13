@@ -2,3 +2,4 @@
 
 2. Traditional data fetch using axios in SuperHeroes.page.jsx 
 
+3. Data fetch using React Query in RQSuperHeroes.page.jsx
