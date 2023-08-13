@@ -1,1 +1,4 @@
 1. Create React Router DOM v6 implemented with navbar.
+
+2. Traditional data fetch using axios in SuperHeroes.page.jsx 
+

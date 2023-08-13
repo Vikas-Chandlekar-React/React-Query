@@ -1,3 +1,4 @@
 1. npm i @tanstack/react-query
 2. npm i json-server
 3. npm i react-router-dom
+4. npm i axios
