@@ -1,24 +1,20 @@
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
+import { useSuperHeroesData } from "../hooks/useSuperHeroesData";
 
-const fetchSuperHeroes = async () => {
-  console.count("After api call");
-  return await axios.get(`http://localhost:4000/superheroes`);
+const onSuccess = (data) => {
+  console.log("Perform side effect after data fetching = ", data);
 };
 
-const transformData = (data) => {
-  const superHeroNames = data?.data.map((hero) => hero.name);
-  return superHeroNames;
+const onError = (error) => {
+  console.log("Perform side effect after encountering error = ", error);
 };
 
 function RQSuperHeroes() {
   console.count("RQSuperHeroes");
 
-  const { data, isLoading, isError, error, isFetching } = useQuery({
-    queryKey: ["super-heroes"],
-    queryFn: fetchSuperHeroes,
-    select: transformData,
-  });
+  const { data, isLoading, isError, error, isFetching } = useSuperHeroesData(
+    onSuccess,
+    onError
+  );
 
   console.log({ isLoading, isFetching });
   console.log(data);
@@ -33,8 +29,8 @@ function RQSuperHeroes() {
   return (
     <div>
       <h2>RQSuperHeroes Page</h2>
-      {data.map((heroName) => (
-        <div key={heroName}>{heroName}</div>
+      {data?.data?.map((hero) => (
+        <div key={hero.name}>{hero.name}</div>
       ))}
     </div>
   );
