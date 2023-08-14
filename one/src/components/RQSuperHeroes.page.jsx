@@ -6,12 +6,9 @@ const fetchSuperHeroes = async () => {
   return await axios.get(`http://localhost:4000/superheroes`);
 };
 
-const onSuccess = (data) => {
-  console.log("Perform side effect after data fetching = ", data);
-};
-
-const onError = (error) => {
-  console.log("Perform side effect after encountering error = ", error);
+const transformData = (data) => {
+  const superHeroNames = data?.data.map((hero) => hero.name);
+  return superHeroNames;
 };
 
 function RQSuperHeroes() {
@@ -20,11 +17,11 @@ function RQSuperHeroes() {
   const { data, isLoading, isError, error, isFetching } = useQuery({
     queryKey: ["super-heroes"],
     queryFn: fetchSuperHeroes,
-    onSuccess: onSuccess,
-    onError: onError,
+    select: transformData,
   });
 
   console.log({ isLoading, isFetching });
+  console.log(data);
 
   if (isLoading) {
     return <h2>Loading.....</h2>;
@@ -36,8 +33,8 @@ function RQSuperHeroes() {
   return (
     <div>
       <h2>RQSuperHeroes Page</h2>
-      {data?.data?.map((hero) => (
-        <div key={hero.name}>{hero.name}</div>
+      {data.map((heroName) => (
+        <div key={heroName}>{heroName}</div>
       ))}
     </div>
   );
