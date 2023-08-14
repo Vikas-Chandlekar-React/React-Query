@@ -15,3 +15,5 @@
 
 8. Learn how to avoid api call for n seconds and show cached data using stale time 
     Default staleTime : (0 ms)
+
+9. Learn refetchOnMount
