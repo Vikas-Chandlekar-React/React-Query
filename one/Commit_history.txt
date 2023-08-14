@@ -21,3 +21,5 @@
 10. Learn refetchOnWindowFocus
 
 11. Learn how data fetch on regular interval using polling mechanism 
+
+12. Learn useQuery on button click
