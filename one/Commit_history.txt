@@ -19,3 +19,5 @@
 9. Learn refetchOnMount
 
 10. Learn refetchOnWindowFocus
+
+11. Learn how data fetch on regular interval using polling mechanism 

@@ -9,14 +9,17 @@ const fetchSuperHeroes = () => {
 function RQSuperHeroes() {
   console.count("RQSuperHeroes");
 
-  /**  DESC : refetchOnWindowFocus : true/false/"always"
-   * Default : true
-   * When component get focus it will call api
+  /**  DESC : refetchOnWindowFocus : false/time in ms
+   * Default : false
+   * If you want to api call after regular interval
+   * Note : it will not polling when component lost focus (not working on background)
+   * If you want to polling work on background then you must use refetchIntervalInBackground: true
    */
   const { data, isLoading, isError, error, isFetching } = useQuery({
     queryKey: ["super-heroes"],
     queryFn: fetchSuperHeroes,
-    refetchOnWindowFocus: true,
+    refetchInterval: 2000,
+    refetchIntervalInBackground: true,
   });
 
   console.log({ isLoading, isFetching });
