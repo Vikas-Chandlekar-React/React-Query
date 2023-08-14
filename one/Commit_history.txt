@@ -29,3 +29,5 @@
 14. Learn transform data from backend to frontend using "select"
 
 15. Learn how to create custom query hook
+
+16. Learn how to query by id 

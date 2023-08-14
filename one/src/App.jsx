@@ -6,6 +6,7 @@ import SuperHeroes from "./components/SuperHeroes.page";
 import RQSuperHeroes from "./components/RQSuperHeroes.page";
 import Navbar from "./components/Navbar/Navbar";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import RQSuperHero from "./components/RQSuperHero.page";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/super-heroes" element={<SuperHeroes />} />
             <Route path="/rq-super-heroes" element={<RQSuperHeroes />} />
+            <Route path="/rq-super-heroes/:heroId" element={<RQSuperHero />} />
           </Routes>
         </BrowserRouter>
         <ReactQueryDevtools initialIsOpen={false} />

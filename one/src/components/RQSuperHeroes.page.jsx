@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import { useSuperHeroesData } from "../hooks/useSuperHeroesData";
+import "../App.css";
 
 const onSuccess = (data) => {
   console.log("Perform side effect after data fetching = ", data);
@@ -30,7 +32,9 @@ function RQSuperHeroes() {
     <div>
       <h2>RQSuperHeroes Page</h2>
       {data?.data?.map((hero) => (
-        <div key={hero.name}>{hero.name}</div>
+        <div key={hero.id}>
+          <Link to={`/rq-super-heroes/${hero.id}`}>{hero.name}</Link>
+        </div>
       ))}
     </div>
   );
