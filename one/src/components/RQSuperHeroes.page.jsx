@@ -9,15 +9,14 @@ const fetchSuperHeroes = () => {
 function RQSuperHeroes() {
   console.count("RQSuperHeroes");
 
-  /**  DESC : refetchOnMount : true/false/"always"
+  /**  DESC : refetchOnWindowFocus : true/false/"always"
    * Default : true
-   * When component mount traditionally api call but we can stop api call on component mount
-   * by using false
+   * When component get focus it will call api
    */
   const { data, isLoading, isError, error, isFetching } = useQuery({
     queryKey: ["super-heroes"],
     queryFn: fetchSuperHeroes,
-    refetchOnMount: false,
+    refetchOnWindowFocus: true,
   });
 
   console.log({ isLoading, isFetching });

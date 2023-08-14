@@ -17,3 +17,5 @@
     Default staleTime : (0 ms)
 
 9. Learn refetchOnMount
+
+10. Learn refetchOnWindowFocus
