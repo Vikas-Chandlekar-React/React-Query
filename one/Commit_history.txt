@@ -11,3 +11,7 @@
 6. Install and Implement React Query DevTools 
 
 7. Learn how to cache query set time and working 
+    Default cacheTime : (300000 ms)(5 min)
+
+8. Learn how to avoid api call for n seconds and show cached data using stale time 
+    Default staleTime : (0 ms)

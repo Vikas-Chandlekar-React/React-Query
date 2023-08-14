@@ -9,10 +9,17 @@ const fetchSuperHeroes = () => {
 function RQSuperHeroes() {
   console.count("RQSuperHeroes");
 
+  /**  DESC : staleTime :
+   *  - default : 0 ms
+   *  - When we don't use this state is stale state
+   * and when we use this state is fresh after we specified time elapsed
+   * state change from fresh state to stale state
+   *  - When we come back again before time we specified then no api called happened because it is fresh state
+   */
   const { data, isLoading, isError, error, isFetching } = useQuery({
     queryKey: ["super-heroes"],
     queryFn: fetchSuperHeroes,
-    cacheTime: 5000,
+    staleTime: 30000,
   });
 
   console.log({ isLoading, isFetching });
