@@ -22,6 +22,9 @@ function Navbar() {
             RQ Dynamic Parallel Queries
           </NavLink>
         </li>
+        <li>
+          <NavLink to="/rq-dependent">RQ Dependent Queries</NavLink>
+        </li>
       </ul>
     </nav>
   );
