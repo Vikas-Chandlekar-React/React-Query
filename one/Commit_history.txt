@@ -31,3 +31,5 @@
 15. Learn how to create custom query hook
 
 16. Learn how to query by id 
+
+17. Learn how to do parallel queries in ParallelQueries.page.jsx 

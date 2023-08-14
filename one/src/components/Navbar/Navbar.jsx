@@ -14,6 +14,9 @@ function Navbar() {
         <li>
           <NavLink to="/rq-super-heroes">RQ Super Heroes</NavLink>
         </li>
+        <li>
+          <NavLink to="/rq-parallel">RQ Parallel Queries</NavLink>
+        </li>
       </ul>
     </nav>
   );
