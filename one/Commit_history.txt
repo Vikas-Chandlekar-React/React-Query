@@ -9,3 +9,5 @@
 5. Show Error message while fetch data using React Query in RQSuperHeroes.page.jsx 
 
 6. Install and Implement React Query DevTools 
+
+7. Learn how to cache query set time and working 
