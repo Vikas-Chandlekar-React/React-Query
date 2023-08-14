@@ -17,6 +17,11 @@ function Navbar() {
         <li>
           <NavLink to="/rq-parallel">RQ Parallel Queries</NavLink>
         </li>
+        <li>
+          <NavLink to="/rq-dynamic-parallel">
+            RQ Dynamic Parallel Queries
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

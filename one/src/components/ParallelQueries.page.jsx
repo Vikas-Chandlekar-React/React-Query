@@ -10,6 +10,7 @@ const fetchFriends = () => {
 
 // TOPIC : Parallel Queries
 function ParallelQueries() {
+  console.count("ParallelQueries");
   const { data: superHeroes } = useQuery(["super-heroes"], fetchSuperHeroes);
   const { data: friends } = useQuery(["friends"], fetchFriends);
   return (

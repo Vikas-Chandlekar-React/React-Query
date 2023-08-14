@@ -33,3 +33,5 @@
 16. Learn how to query by id 
 
 17. Learn how to do parallel queries in ParallelQueries.page.jsx 
+
+18. Learn how to do dynamic paralle queries in DynamicParallelQueries.page.jsx 
