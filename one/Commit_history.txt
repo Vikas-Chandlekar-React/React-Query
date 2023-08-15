@@ -44,3 +44,5 @@
 21. Learn how to do paginated queries in PaginatedQueries.page.jsx 
 
 22. Learn how to do infinite queries using load more button in InfiniteQueries.page.jsx 
+
+23. Learn how to add data in RQPostSuperHeroes.page.jsx 

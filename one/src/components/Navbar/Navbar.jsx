@@ -31,6 +31,9 @@ function Navbar() {
         <li>
           <NavLink to="/rq-infinite">RQ Infinite Queries</NavLink>
         </li>
+        <li>
+          <NavLink to="/rq-post-super-heroes">RQ Post Data</NavLink>
+        </li>
       </ul>
     </nav>
   );

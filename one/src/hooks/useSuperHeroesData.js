@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 const fetchSuperHeroes = async () => {
@@ -13,4 +13,13 @@ export const useSuperHeroesData = (onSuccessFun, onErrorFun) => {
     onSuccess: onSuccessFun,
     onError: onErrorFun,
   });
+};
+
+const addSuperHero = (hero) => {
+  return axios.post("http://localhost:4000/superheroes", hero);
+};
+
+// NOTE : For post,update,delete data use must use useMutation
+export const useAddSuperHeroData = () => {
+  return useMutation(addSuperHero);
 };
