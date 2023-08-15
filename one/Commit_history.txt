@@ -42,3 +42,5 @@
     (Here, no loading text)
 
 21. Learn how to do paginated queries in PaginatedQueries.page.jsx 
+
+22. Learn how to do infinite queries using load more button in InfiniteQueries.page.jsx 

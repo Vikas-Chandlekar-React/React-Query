@@ -28,6 +28,9 @@ function Navbar() {
         <li>
           <NavLink to="/rq-paginated">RQ Paginated Queries</NavLink>
         </li>
+        <li>
+          <NavLink to="/rq-infinite">RQ Infinite Queries</NavLink>
+        </li>
       </ul>
     </nav>
   );
