@@ -1,4 +1,4 @@
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 
 const fetchSuperHeroes = async () => {
@@ -21,5 +21,12 @@ const addSuperHero = (hero) => {
 
 // NOTE : For post,update,delete data use must use useMutation
 export const useAddSuperHeroData = () => {
-  return useMutation(addSuperHero);
+  const queryClient = useQueryClient();
+  return useMutation(addSuperHero, {
+    onSuccess: () => {
+      // ACTION : Before, when we add data we manually fetch all data to show latest data to solve problem see below code
+      // NOTE : It is useful when we add data in db and then refetch all data using invalidateQueries
+      queryClient.invalidateQueries(["super-heroes"]);
+    },
+  });
 };

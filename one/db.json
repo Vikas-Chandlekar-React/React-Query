@@ -29,6 +29,11 @@
       "name": "TOM",
       "alterEgo": "tom",
       "id": 6
+    },
+    {
+      "name": "JANKI",
+      "alterEgo": "janki",
+      "id": 7
     }
   ],
   "friends": [

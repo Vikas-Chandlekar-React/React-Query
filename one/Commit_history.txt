@@ -46,3 +46,5 @@
 22. Learn how to do infinite queries using load more button in InfiniteQueries.page.jsx 
 
 23. Learn how to add data in RQPostSuperHeroes.page.jsx 
+
+24. Learn how to do query invalidation in hooks => useSuperHeroesData.js 
