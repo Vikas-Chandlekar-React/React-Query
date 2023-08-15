@@ -37,3 +37,6 @@
 18. Learn how to do dynamic parallel queries in DynamicParallelQueries.page.jsx 
 
 19. Learn how to do dependent queries in DependentQueries.page.jsx 
+
+20. Learn how to set Initial Query Data for RQ Super Hero Details in hook => useSuperHeroData.js 
+    (Here, no loading text)

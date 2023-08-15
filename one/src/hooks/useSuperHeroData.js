@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 
 // const fetchSuperHero = async (heroId) => {
@@ -22,9 +22,47 @@ const fetchSuperHero = async ({ queryKey }) => {
   return await axios.get(`http://localhost:4000/superheroes/${heroId}`);
 };
 
+// export const useSuperHeroData = (heroId) => {
+//   return useQuery({
+//     queryKey: ["super-heroes", heroId],
+//     queryFn: fetchSuperHero,
+//   });
+// };
+
+// TOPIC : Initial Query Data
 export const useSuperHeroData = (heroId) => {
-  return useQuery({
-    queryKey: ["super-heroes", heroId],
-    queryFn: fetchSuperHero,
+  // NOTE : useQueryClient instance has access to query cache data for setting initial data
+  const queryClient = useQueryClient();
+
+  // ACTION : NEW WAY
+  // return useQuery({
+  //   queryKey: ["super-heroes", heroId],
+  //   queryFn: fetchSuperHero,
+  //   initialData: () => {
+  //     const hero = queryClient
+  //       .getQueryData(["super-heroes"])
+  //       ?.data?.find((hero) => hero.id === parseInt(heroId));
+
+  //     if (hero) {
+  //       return { data: hero };
+  //     } else {
+  //       return undefined;
+  //     }
+  //   },
+  // });
+
+  // ACTION : OLD WAY
+  return useQuery(["super-heroes", heroId], fetchSuperHero, {
+    initialData: () => {
+      const hero = queryClient
+        .getQueryData(["super-heroes"])
+        ?.data?.find((hero) => hero.id === parseInt(heroId));
+
+      if (hero) {
+        return { data: hero };
+      } else {
+        return undefined;
+      }
+    },
   });
 };
