@@ -49,6 +49,16 @@
       "name": "RANI",
       "alterEgo": "rani",
       "id": 10
+    },
+    {
+      "name": "YETI",
+      "alterEgo": "yeti",
+      "id": 11
+    },
+    {
+      "name": "BUNTY",
+      "alterEgo": "bunty",
+      "id": 12
     }
   ],
   "friends": [

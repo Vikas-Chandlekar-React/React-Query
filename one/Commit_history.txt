@@ -50,3 +50,5 @@
 24. Learn how to do query invalidation in hooks => useSuperHeroesData.js 
 
 25. Learn how to do handling mutation response in hooks => useSuperHeroesData.js 
+
+26. Learn how to do Optimistic Updates in hooks => useSuperHeroesData.js 
