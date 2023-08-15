@@ -25,6 +25,9 @@ function Navbar() {
         <li>
           <NavLink to="/rq-dependent">RQ Dependent Queries</NavLink>
         </li>
+        <li>
+          <NavLink to="/rq-paginated">RQ Paginated Queries</NavLink>
+        </li>
       </ul>
     </nav>
   );
