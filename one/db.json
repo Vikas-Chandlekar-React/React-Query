@@ -34,6 +34,21 @@
       "name": "JANKI",
       "alterEgo": "janki",
       "id": 7
+    },
+    {
+      "name": "JAY",
+      "alterEgo": "jay",
+      "id": 8
+    },
+    {
+      "name": "JERRY",
+      "alterEgo": "jerry",
+      "id": 9
+    },
+    {
+      "name": "RANI",
+      "alterEgo": "rani",
+      "id": 10
     }
   ],
   "friends": [

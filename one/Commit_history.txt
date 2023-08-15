@@ -48,3 +48,5 @@
 23. Learn how to add data in RQPostSuperHeroes.page.jsx 
 
 24. Learn how to do query invalidation in hooks => useSuperHeroesData.js 
+
+25. Learn how to do handling mutation response in hooks => useSuperHeroesData.js 
